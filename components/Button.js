@@ -13,6 +13,10 @@ export default function Button(props) {
     }
   });
 
+  function mint() {
+    alert("minted");
+  }
+
   async function connectWallet() {
     if (typeof window.ethereum !== "undefined") {
       try {
@@ -39,7 +43,7 @@ export default function Button(props) {
   return (
     <button
       onClick={connectWallet}
-      className="border border-slate-300 hover:border-slate-400 bg-blue-500 hover:bg-blue-600 my-4 p-2 rounded-sm"
+      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-4"
     >
       {address}
     </button>

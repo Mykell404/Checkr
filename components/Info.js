@@ -2,7 +2,7 @@ import Button from "./Button";
 
 export default function Info() {
   return (
-    <div className="flex flex-wrap md:columns-2">
+    <div className="flex flex-wrap">
       <div className="container my-2 py-2">
         <h2 className="text-align-center font-bold">Checkr</h2>
         <p>
