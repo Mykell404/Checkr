@@ -1,22 +1,35 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Info from "../components/Info";
+import ImageCard from "../components/ImageCard";
+import { useState } from "react";
+import ConnectInfo from "../components/ConnectInfo";
 import Form from "../components/Form";
+import SignupHeader from "../components/SignupHeader";
 
 export default function Home() {
-  return (
-    <div className="px-4 bg-sky-400 min-h-screen">
-      <Head>
-        <title>Checkr</title>
-        <meta name="description" content="A Polygon Web3 dapp" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+  const [isConnected, setIsConnected] = useState(false);
 
-      <Header />
-      <div className="m-6 md:flex md:justify-between">
-        <Info />
+  if (isConnected) {
+    return (
+      <div className="bg-form-bg min-h-screen p-8">
+        <SignupHeader />
         <Form />
       </div>
-    </div>
-  );
+    );
+  } else
+    return (
+      <div className="px-4 bg-white min-h-screen">
+        <Head>
+          <title>Checkr</title>
+          <meta name="description" content="A Polygon Web3 dapp" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="flex flex-wrap md:flex-nowrap p-6">
+          <ImageCard />
+          <ConnectInfo
+            isConnected={isConnected}
+            setIsConnected={setIsConnected}
+          />
+        </div>
+      </div>
+    );
 }

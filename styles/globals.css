@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   body {
     @apply min-h-screen;
   }
+} */
+
+@font-face {
+  font-family: "Octa Brain";
+  src: url("../public/fonts/Octa\ Brain.otf");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../public/fonts/Outfit-VariableFont_wght.ttf");
 }
