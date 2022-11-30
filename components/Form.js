@@ -1,11 +1,15 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Form() {
   const [form, setForm] = useState({});
+  const router = useRouter();
 
   function handleSubmit(e) {
-    console.log(form);
     e.preventDefault();
+    console.log(form);
+
+    router.push("/dashboard");
   }
 
   function handleChange(e) {

@@ -2,7 +2,7 @@ import ConnectButton from "./Buttons/Connect";
 
 export default function ({ isConnected, setIsConnected }) {
   return (
-    <div className="mt-8 md:mt-0 flex w-full md:basis-1/2 flex flex-col text-center md:text-left md:ml-8">
+    <div className="mt-8 md:mt-0  w-full md:basis-1/2 flex flex-col text-center md:text-left md:ml-8">
       <p className="font-outfit text-connect-blue text-2xl md:text-5xl font-medium">
         Connect Wallet
       </p>
