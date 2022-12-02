@@ -1,7 +1,7 @@
 export default function NavBar() {
   return (
     <div className="mb-12">
-      <nav className="flex justify-between items-center">
+      <nav className="flex justify-between items-center mt-5">
         <h1 className="font-octabrain text-4xl text-white underline underline-offset-8 decoration-1 md:text-6xl flex items-center">
           CHECKR
         </h1>
