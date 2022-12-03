@@ -1,15 +1,24 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+// import { mintNFT } from "../utils/mint";
 
-export default function Form() {
+export default function Form({ address }) {
   const [form, setForm] = useState({});
   const router = useRouter();
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     console.log(form);
-
-    router.push("/dashboard");
+    const { status } = await mintNft(
+      form.firstname,
+      form.surname,
+      form.gender,
+      form.status,
+      form.dob,
+      form.zip
+    );
+    console.log(status);
+    router.push({ pathname: "/dashboard", query: { address: address } });
   }
 
   function handleChange(e) {

@@ -2,11 +2,14 @@ import DashBoardRoute from "../components/DashboardRoute";
 import NavBar from "../components/NavBar";
 import Profile from "../components/Profile";
 import CheckUp from "../components/CheckUp";
+import { useRouter } from "next/router";
 
 export default function DashBoard() {
+  const router = useRouter();
+  const { address } = router.query;
   return (
     <div className="bg-form-bg min-h-screen p-8">
-      <NavBar />
+      <NavBar address={address} />
       <div className="md:flex md:justify-between">
         <div className="profile-link">
           <Profile />

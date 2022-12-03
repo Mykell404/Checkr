@@ -6,7 +6,7 @@ export default function Profile() {
       <img src="/big_profile-img.png"></img>
       <div className="flex mt-4 justify-around">
         <p className="">0x90d4F7D90761E2a3..... </p>
-        <Image src="/icon-copy.svg" width={18} height={20}></Image>
+        <Image src="/icon-copy.svg" width={18} height={20} alt="Image"></Image>
       </div>
       <p className="mt-2 text-center">Yetunde Olufemi</p>
       <div className="p-4">

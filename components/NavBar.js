@@ -1,4 +1,4 @@
-export default function NavBar() {
+export default function NavBar({ address }) {
   return (
     <div className="mb-12">
       <nav className="flex justify-between items-center mt-5">
@@ -24,12 +24,12 @@ export default function NavBar() {
           </div>
         </div>
         <div className="md:bg-white flex font-outfit h-12 p-2 bg-transparent items-center justify-around">
-          <div class="space-y-2 md:hidden items-center mr-2 ">
-            <span class="block w-8 h-1 bg-white"></span>
-            <span class="block w-8 h-1 bg-white"></span>
-            <span class="block w-8 h-1 bg-white"></span>
+          <div className="space-y-2 md:hidden items-center mr-2 ">
+            <span className="block w-8 h-1 bg-white"></span>
+            <span className="block w-8 h-1 bg-white"></span>
+            <span className="block w-8 h-1 bg-white"></span>
           </div>
-          <p className="md:flex md:items-center hidden">0x90d...</p>
+          <p className="md:flex md:items-center hidden">{address}</p>
           <img
             src="/profile_img.svg"
             className="w-12 border-white border rounded-full"
